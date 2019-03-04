@@ -47,6 +47,9 @@
                                 <constraint firstAttribute="height" constant="42" id="t0U-LQ-dBH"/>
                             </constraints>
                             <state key="normal" image="aspdf-Close"/>
+                            <connections>
+                                <action selector="btnCloseSearchTapped:" destination="-1" eventType="touchUpInside" id="cFp-bx-mHo"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaV-be-PKW">
                             <rect key="frame" x="1094" y="7" width="42" height="42"/>

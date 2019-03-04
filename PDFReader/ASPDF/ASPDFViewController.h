@@ -47,6 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)btnSearchTapped:(id)sender;
 - (IBAction)btnPreviousResultTapped:(id)sender;
 - (IBAction)btnNextResultTapped:(id)sender;
+- (IBAction)btnCloseSearchTapped:(id)sender;
 
 //Constraints
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lcSearchOrigin;

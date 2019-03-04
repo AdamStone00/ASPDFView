@@ -88,6 +88,8 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self togglSearchTool];
+    
     //Notifications For Page Change
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(PDFViewDidChangePage:) name:PDFViewPageChangedNotification object:self.documentContainer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(documentFinishedSearching:) name:PDFDocumentDidEndFindNotification object:self.pdfDocument];
@@ -443,7 +445,7 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
 }
 
 - (IBAction)btnNextResultTapped:(id)sender {
-    if ([self.searchResultArray count] && self.searchResultIndex != ([self.searchResultArray count])){
+    if ([self.searchResultArray count] && self.searchResultIndex < ([self.searchResultArray count] - 1)){
         [self setSearchResultIndex:self.searchResultIndex += 1];
         PDFSelection *result = [self.searchResultArray objectAtIndex:self.searchResultIndex];
         if ([result.pages firstObject] != self.documentContainer.currentPage){
@@ -453,11 +455,26 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
     }
 }
 
+- (IBAction)btnCloseSearchTapped:(id)sender {
+    
+    //Remove any current selection
+    [self.documentContainer setCurrentSelection:nil];
+    
+    //REsign Keyboard
+    [self.documentSearchBar resignFirstResponder];
+    
+    //Clear Old Results
+    [self.searchResultArray removeAllObjects];
+    
+    //Clear Index
+    [self setSearchResultIndex:0];
+    
+    //Hide UI
+    [self togglSearchTool];
+    
+}
 
-
-
-
-#pragma mark - Close Document
+#pragma mark - Close Documents
 
 -(void)closeDocument{
     [self dismissViewControllerAnimated:YES completion:nil];
