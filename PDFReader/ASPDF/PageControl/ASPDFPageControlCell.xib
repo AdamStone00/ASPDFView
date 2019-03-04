@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sO1-3x-EFu" customClass="ASPDFPageControlViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="47" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="47" height="110"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pku-8I-suh">
+                        <rect key="frame" x="0.0" y="0.0" width="47" height="66"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="66" id="ZaN-kx-C9a"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-uK-WDA">
+                        <rect key="frame" x="0.0" y="66" width="47" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="4X5-WC-zrX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="dNA-uK-WDA" firstAttribute="leading" secondItem="sO1-3x-EFu" secondAttribute="leading" id="IZD-q9-1vB"/>
+                <constraint firstAttribute="trailing" secondItem="Pku-8I-suh" secondAttribute="trailing" id="XWn-5m-g8g"/>
+                <constraint firstItem="dNA-uK-WDA" firstAttribute="top" secondItem="Pku-8I-suh" secondAttribute="bottom" id="cVu-Ek-9u9"/>
+                <constraint firstItem="Pku-8I-suh" firstAttribute="leading" secondItem="sO1-3x-EFu" secondAttribute="leading" id="cnT-6X-TED"/>
+                <constraint firstItem="Pku-8I-suh" firstAttribute="top" secondItem="sO1-3x-EFu" secondAttribute="top" id="dC6-oN-SSO"/>
+                <constraint firstAttribute="trailing" secondItem="dNA-uK-WDA" secondAttribute="trailing" id="vtl-U8-Fhc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Xtc-ty-4QD"/>
+            <size key="customSize" width="47" height="110"/>
+            <connections>
+                <outlet property="imgPageThumbnail" destination="Pku-8I-suh" id="FIo-wN-tTc"/>
+                <outlet property="lblPageNumber" destination="dNA-uK-WDA" id="6GN-9E-JY2"/>
+            </connections>
+            <point key="canvasLocation" x="42.399999999999999" y="-25.187406296851577"/>
+        </collectionViewCell>
+    </objects>
+</document>

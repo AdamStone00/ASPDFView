@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ASPDFView">
+            <connections>
+                <outlet property="documentContainer" destination="T8Q-IA-YCM" id="PJX-in-gEm"/>
+                <outlet property="documentSearchBar" destination="JZ7-BV-pI7" id="nCz-8g-gny"/>
+                <outlet property="lcDocumentContainerBottom" destination="nRY-uS-jyI" id="6Xa-fZ-3lp"/>
+                <outlet property="lcDocumentContainerTop" destination="WOa-In-YGI" id="fxZ-d2-c6R"/>
+                <outlet property="lcSearchOrigin" destination="PXy-KA-Sp5" id="XK9-8O-KjO"/>
+                <outlet property="pageControl" destination="4Sq-vm-SE1" id="4BR-Sq-Xcv"/>
+                <outlet property="toolbar" destination="ixt-Yf-ZIT" id="QHq-Z2-UER"/>
+                <outlet property="view" destination="iN0-l3-epB" id="vkg-s5-wqW"/>
+                <outlet property="vwBottomBar" destination="5Sd-x0-DHU" id="G9b-7j-A19"/>
+                <outlet property="vwSearchBar" destination="GsV-l9-6PO" id="TpG-Ax-7uW"/>
+                <outlet property="vwTopBar" destination="d86-XY-97b" id="xwN-0G-aRD"/>
+                <outletCollection property="viewerButtons" destination="Fzx-AD-elw" id="eVm-Rp-aGx"/>
+                <outletCollection property="viewerButtons" destination="GaV-be-PKW" id="frp-aR-dU4"/>
+                <outletCollection property="viewerButtons" destination="sHz-YY-w51" id="ggY-nG-Tkk"/>
+                <outletCollection property="viewerButtons" destination="Voc-0z-LhN" id="LIm-1t-40W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8Q-IA-YCM" customClass="PDFView">
+                    <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GsV-l9-6PO">
+                    <rect key="frame" x="0.0" y="74" width="1194" height="56"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHz-YY-w51">
+                            <rect key="frame" x="1144" y="7" width="42" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="23c-2w-pFo"/>
+                                <constraint firstAttribute="height" constant="42" id="t0U-LQ-dBH"/>
+                            </constraints>
+                            <state key="normal" image="aspdf-Close"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaV-be-PKW">
+                            <rect key="frame" x="1094" y="7" width="42" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="H9e-iM-b94"/>
+                                <constraint firstAttribute="width" constant="42" id="kbu-Hc-bzE"/>
+                            </constraints>
+                            <state key="normal" image="aspdf-Next"/>
+                            <connections>
+                                <action selector="btnNextResultTapped:" destination="-1" eventType="touchUpInside" id="hYa-ut-BF5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-AD-elw">
+                            <rect key="frame" x="1044" y="7" width="42" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="42" id="LNu-c9-V05"/>
+                                <constraint firstAttribute="height" constant="42" id="nc3-Rz-hCt"/>
+                            </constraints>
+                            <state key="normal" image="aspdf-Back"/>
+                            <connections>
+                                <action selector="btnPreviousResultTapped:" destination="-1" eventType="touchUpInside" id="AyJ-Hl-U3M"/>
+                            </connections>
+                        </button>
+                        <searchBar contentMode="redraw" placeholder="Search Document" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-BV-pI7">
+                            <rect key="frame" x="0.0" y="0.0" width="986" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="y4W-IX-zSC"/>
+                            </connections>
+                        </searchBar>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Voc-0z-LhN">
+                            <rect key="frame" x="994" y="7" width="42" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="JaB-Ll-8Fd"/>
+                                <constraint firstAttribute="width" constant="42" id="cM8-vL-fiY"/>
+                            </constraints>
+                            <state key="normal" image="aspdf-Search"/>
+                            <connections>
+                                <action selector="btnSearchTapped:" destination="-1" eventType="touchUpInside" id="sPR-kP-L2F"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Voc-0z-LhN" firstAttribute="leading" secondItem="JZ7-BV-pI7" secondAttribute="trailing" constant="8" id="8bH-Gz-AbY"/>
+                        <constraint firstItem="JZ7-BV-pI7" firstAttribute="leading" secondItem="GsV-l9-6PO" secondAttribute="leading" id="HIf-lJ-yHl"/>
+                        <constraint firstItem="sHz-YY-w51" firstAttribute="leading" secondItem="GaV-be-PKW" secondAttribute="trailing" constant="8" id="Nf6-6d-mDK"/>
+                        <constraint firstAttribute="height" constant="56" id="Rqc-BV-xkk"/>
+                        <constraint firstAttribute="trailing" secondItem="sHz-YY-w51" secondAttribute="trailing" constant="8" id="Ruh-mb-d8h"/>
+                        <constraint firstAttribute="bottom" secondItem="JZ7-BV-pI7" secondAttribute="bottom" id="dX5-hm-yir"/>
+                        <constraint firstItem="Fzx-AD-elw" firstAttribute="centerY" secondItem="GsV-l9-6PO" secondAttribute="centerY" id="i8R-BN-NFp"/>
+                        <constraint firstItem="Voc-0z-LhN" firstAttribute="centerY" secondItem="GsV-l9-6PO" secondAttribute="centerY" id="jfI-h4-tTv"/>
+                        <constraint firstItem="GaV-be-PKW" firstAttribute="leading" secondItem="Fzx-AD-elw" secondAttribute="trailing" constant="8" id="jrJ-wb-dPq"/>
+                        <constraint firstItem="Fzx-AD-elw" firstAttribute="leading" secondItem="Voc-0z-LhN" secondAttribute="trailing" constant="8" id="jub-pT-6OM"/>
+                        <constraint firstItem="sHz-YY-w51" firstAttribute="centerY" secondItem="GsV-l9-6PO" secondAttribute="centerY" id="rVb-sL-Add"/>
+                        <constraint firstItem="JZ7-BV-pI7" firstAttribute="top" secondItem="GsV-l9-6PO" secondAttribute="top" id="uDl-9O-aVY"/>
+                        <constraint firstItem="GaV-be-PKW" firstAttribute="centerY" secondItem="GsV-l9-6PO" secondAttribute="centerY" id="yvm-gd-nIl"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sd-x0-DHU">
+                    <rect key="frame" x="0.0" y="708" width="1194" height="126"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4Sq-vm-SE1">
+                            <rect key="frame" x="0.0" y="0.0" width="1194" height="106"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="106" id="4mH-MS-3Nk"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jwf-e0-P7F">
+                                <size key="itemSize" width="50" height="86"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="4Sq-vm-SE1" firstAttribute="bottom" secondItem="YZP-gV-goV" secondAttribute="bottom" id="A3L-Pj-Y64"/>
+                        <constraint firstItem="4Sq-vm-SE1" firstAttribute="leading" secondItem="YZP-gV-goV" secondAttribute="leading" id="ELy-Fu-FxO"/>
+                        <constraint firstItem="4Sq-vm-SE1" firstAttribute="top" secondItem="YZP-gV-goV" secondAttribute="top" id="bmk-3y-bd9"/>
+                        <constraint firstItem="YZP-gV-goV" firstAttribute="trailing" secondItem="4Sq-vm-SE1" secondAttribute="trailing" id="wwn-gc-aAP"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="YZP-gV-goV"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d86-XY-97b">
+                    <rect key="frame" x="0.0" y="0.0" width="1194" height="74"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixt-Yf-ZIT">
+                            <rect key="frame" x="0.0" y="24" width="1194" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="nG7-HG-6Tn"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="Nmt-rF-qe0"/>
+                            <items>
+                                <navigationItem title="Title" id="XUz-th-Btg"/>
+                            </items>
+                        </navigationBar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ixt-Yf-ZIT" firstAttribute="top" secondItem="Mzx-HT-U0D" secondAttribute="top" id="B57-6M-xyU"/>
+                        <constraint firstItem="ixt-Yf-ZIT" firstAttribute="leading" secondItem="d86-XY-97b" secondAttribute="leading" id="KzI-2x-gj4"/>
+                        <constraint firstAttribute="bottom" secondItem="ixt-Yf-ZIT" secondAttribute="bottom" id="P8X-1u-iht"/>
+                        <constraint firstAttribute="trailing" secondItem="ixt-Yf-ZIT" secondAttribute="trailing" id="XKW-KW-c0w"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Mzx-HT-U0D"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="T8Q-IA-YCM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="2yM-Ys-cXm"/>
+                <constraint firstItem="d86-XY-97b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8zY-yI-ctX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GsV-l9-6PO" secondAttribute="trailing" id="KFn-b7-5NH"/>
+                <constraint firstItem="GsV-l9-6PO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Ncx-qC-t8n"/>
+                <constraint firstItem="GsV-l9-6PO" firstAttribute="top" secondItem="d86-XY-97b" secondAttribute="bottom" id="PXy-KA-Sp5"/>
+                <constraint firstAttribute="bottom" secondItem="5Sd-x0-DHU" secondAttribute="bottom" id="RbD-1A-JPI"/>
+                <constraint firstItem="T8Q-IA-YCM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WOa-In-YGI"/>
+                <constraint firstItem="5Sd-x0-DHU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="XiS-5P-LLR"/>
+                <constraint firstItem="d86-XY-97b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eiY-hJ-VDi"/>
+                <constraint firstItem="5Sd-x0-DHU" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ifD-EE-orK"/>
+                <constraint firstItem="d86-XY-97b" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jPe-WU-9Vo"/>
+                <constraint firstAttribute="bottom" secondItem="T8Q-IA-YCM" secondAttribute="bottom" id="nRY-uS-jyI"/>
+                <constraint firstItem="T8Q-IA-YCM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zDk-wk-PNP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.69346733668343" y="154.67625899280577"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="aspdf-Back" width="50" height="50"/>
+        <image name="aspdf-Close" width="50" height="50"/>
+        <image name="aspdf-Next" width="50" height="50"/>
+        <image name="aspdf-Search" width="50" height="50"/>
+    </resources>
+</document>
