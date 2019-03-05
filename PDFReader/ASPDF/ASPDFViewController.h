@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <PDFKit/PDFKit.h>
+#import "ASPDFBookmarkToolViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ASPDFView : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, PDFViewDelegate>
+@interface ASPDFView : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, PDFViewDelegate, ASPDFBookmarkToolDelegate>
 
 //Config Options
 @property (retain, nonatomic) UIColor *navigationBackgroundColor;

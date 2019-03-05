@@ -322,7 +322,7 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
         [bookmarkButton setImage:[UIImage imageNamed:@"aspdf-BookmarkEmpty"] forState:UIControlStateNormal];
         [bookmarkButton setTitle:@"" forState:UIControlStateNormal];
         [bookmarkButton sizeToFit];
-        [bookmarkButton addTarget:self action:@selector(shareDocument) forControlEvents:UIControlEventTouchUpInside];
+        [bookmarkButton addTarget:self action:@selector(toggleBookmarkTool) forControlEvents:UIControlEventTouchUpInside];
         self.bookmarkButtonItem = [[UIBarButtonItem alloc] initWithCustomView:bookmarkButton];
         [toolbarOptions addObject:self.bookmarkButtonItem];
         
@@ -474,10 +474,61 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
     
 }
 
+#pragma mark - BookMark Tool
+
+- (void) toggleBookmarkTool{
+    ASPDFBookmarkToolViewController *bookmarkTool = [[ASPDFBookmarkToolViewController alloc] initWithNibName:@"ASPDFBookmarkToolView" bundle:nil];
+    
+    [bookmarkTool setPdfView:self.documentContainer];
+    [bookmarkTool setDocumentName:@"testing"];
+    [bookmarkTool setNavigationBackgroundColor:self.navigationBackgroundColor];
+    [bookmarkTool setNavigationForegroundColor:self.navigationForegroundColor];
+    [bookmarkTool setTitleFont:self.titleFont];
+    [bookmarkTool setDelegate:self];
+    
+    UINavigationController *ncBookmarkTool = [[UINavigationController alloc] initWithRootViewController:bookmarkTool];
+    
+    NSInteger horizontalClass = self.traitCollection.horizontalSizeClass;
+    
+    if (horizontalClass == UIUserInterfaceSizeClassRegular) {
+        
+        //iPad
+        ncBookmarkTool.modalPresentationStyle = UIModalPresentationPopover;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (ncBookmarkTool.popoverPresentationController){
+                [ncBookmarkTool.popoverPresentationController setBarButtonItem:self.bookmarkButtonItem];
+            }
+            [self presentViewController:ncBookmarkTool animated:YES completion:nil];
+        });
+        
+    }else{
+        
+        //iPhone
+        [self presentViewController:ncBookmarkTool animated:YES completion:nil];
+        
+    }
+}
+
+- (void) dismissBookmarkTool {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (void) bookmarkToolDidRequestPageAtIndex:(NSUInteger)pageNumber {
+    
+    PDFPage *bookmarkedPage = [self.pdfDocument pageAtIndex:pageNumber];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.documentContainer goToPage:bookmarkedPage];
+    
+}
+
 #pragma mark - Close Documents
 
--(void)closeDocument{
+- (void) closeDocument {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 

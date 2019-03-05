@@ -20,6 +20,9 @@
 		3A8CB778220C47E600BDFE40 /* ASPDFAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8CB777220C47E600BDFE40 /* ASPDFAssets.xcassets */; };
 		3A8CB77D220DB2C800BDFE40 /* ASPDFPageControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8CB77C220DB2C800BDFE40 /* ASPDFPageControlCell.xib */; };
 		3A8CB780220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB77F220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m */; };
+		8E7C3633222D5CD400E70772 /* ASPDFBookmarkToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7C3632222D5CD400E70772 /* ASPDFBookmarkToolView.xib */; };
+		8E7C3636222D5D4400E70772 /* ASPDFBookmarkToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C3635222D5D4400E70772 /* ASPDFBookmarkToolViewController.m */; };
+		8E7C3639222D666B00E70772 /* ASPDFBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C3638222D666B00E70772 /* ASPDFBookmark.m */; };
 		8E89E0F02215CA250064CD54 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E89E0EF2215CA250064CD54 /* TestView.xib */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,11 @@
 		3A8CB77C220DB2C800BDFE40 /* ASPDFPageControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ASPDFPageControlCell.xib; sourceTree = "<group>"; };
 		3A8CB77E220DB7AC00BDFE40 /* ASPDFPageControlViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPDFPageControlViewCell.h; sourceTree = "<group>"; };
 		3A8CB77F220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFPageControlViewCell.m; sourceTree = "<group>"; };
+		8E7C3632222D5CD400E70772 /* ASPDFBookmarkToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ASPDFBookmarkToolView.xib; sourceTree = "<group>"; };
+		8E7C3634222D5D4400E70772 /* ASPDFBookmarkToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPDFBookmarkToolViewController.h; sourceTree = "<group>"; };
+		8E7C3635222D5D4400E70772 /* ASPDFBookmarkToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFBookmarkToolViewController.m; sourceTree = "<group>"; };
+		8E7C3637222D666B00E70772 /* ASPDFBookmark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPDFBookmark.h; sourceTree = "<group>"; };
+		8E7C3638222D666B00E70772 /* ASPDFBookmark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFBookmark.m; sourceTree = "<group>"; };
 		8E89E0EF2215CA250064CD54 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +105,7 @@
 		3A8CB76B220B349800BDFE40 /* ASPDF */ = {
 			isa = PBXGroup;
 			children = (
+				8E7C3631222D5C8700E70772 /* BookmarkTool */,
 				3A8CB779220C73ED00BDFE40 /* PageControl */,
 				3A8CB76C220B34B100BDFE40 /* ASPDFViewController.h */,
 				3A8CB76D220B34B100BDFE40 /* ASPDFViewController.m */,
@@ -130,6 +139,18 @@
 				3A8CB77F220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m */,
 			);
 			path = PageControl;
+			sourceTree = "<group>";
+		};
+		8E7C3631222D5C8700E70772 /* BookmarkTool */ = {
+			isa = PBXGroup;
+			children = (
+				8E7C3632222D5CD400E70772 /* ASPDFBookmarkToolView.xib */,
+				8E7C3634222D5D4400E70772 /* ASPDFBookmarkToolViewController.h */,
+				8E7C3635222D5D4400E70772 /* ASPDFBookmarkToolViewController.m */,
+				8E7C3637222D666B00E70772 /* ASPDFBookmark.h */,
+				8E7C3638222D666B00E70772 /* ASPDFBookmark.m */,
+			);
+			path = BookmarkTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +213,7 @@
 				8E89E0F02215CA250064CD54 /* TestView.xib in Resources */,
 				3A8CB762220B325300BDFE40 /* LaunchScreen.storyboard in Resources */,
 				3A8CB75F220B325300BDFE40 /* Assets.xcassets in Resources */,
+				8E7C3633222D5CD400E70772 /* ASPDFBookmarkToolView.xib in Resources */,
 				3A8CB77D220DB2C800BDFE40 /* ASPDFPageControlCell.xib in Resources */,
 				3A8CB75D220B325200BDFE40 /* Main.storyboard in Resources */,
 				3A8CB778220C47E600BDFE40 /* ASPDFAssets.xcassets in Resources */,
@@ -207,11 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7C3639222D666B00E70772 /* ASPDFBookmark.m in Sources */,
 				3A8CB75A220B325200BDFE40 /* ViewController.m in Sources */,
 				3A8CB76E220B34B100BDFE40 /* ASPDFViewController.m in Sources */,
 				3A8CB765220B325300BDFE40 /* main.m in Sources */,
 				3A8CB757220B325200BDFE40 /* AppDelegate.m in Sources */,
 				3A8CB780220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m in Sources */,
+				8E7C3636222D5D4400E70772 /* ASPDFBookmarkToolViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
