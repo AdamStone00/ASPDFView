@@ -20,13 +20,13 @@ Drag the entire <ASPDF> folder into your project. Make sure you also include PDF
 
 Create an instance of the viewer
 
-```objc
+```objective-c
 ASPDFView *pdfViewer = [[ASPDFView alloc] init];
 ```
 
 Load a PDF document from a URL or resource store and assign it as the PDFDocument for the viewer along with a name and present the controller.
 
-```objc
+```objective-c
 NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"pdf"];
 [pdfViewer setPdfDocument:[[PDFDocument alloc] initWithURL:url]];
 [pdfViewer setDocumentName:@"Example PDF"];
@@ -39,17 +39,20 @@ PDF Reader has several options for configuration:
 ### Style
 
 - navigationBackgroundColor (UIColor)
-```objc
+
+```objective-c
 [self setNavigationBackgroundColor:[UIColor blackColor]];
 ```
 
 - navigationForegroundColor (UIColor)
-```objc
+
+```objective-c
 [self setNavigationForegroundColor:[UIColor whiteColor]];
 ```
 
 - titleFont (UIFont)
-```objc
+
+```objective-c
 [self setTitleFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15]];
 ```
 
