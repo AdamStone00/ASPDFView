@@ -51,6 +51,7 @@
 		8E7C3635222D5D4400E70772 /* ASPDFBookmarkToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFBookmarkToolViewController.m; sourceTree = "<group>"; };
 		8E7C3637222D666B00E70772 /* ASPDFBookmark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPDFBookmark.h; sourceTree = "<group>"; };
 		8E7C3638222D666B00E70772 /* ASPDFBookmark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFBookmark.m; sourceTree = "<group>"; };
+		8E7C3665222ECA0C00E70772 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E89E0EF2215CA250064CD54 /* TestView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +70,7 @@
 		3A8CB749220B325200BDFE40 = {
 			isa = PBXGroup;
 			children = (
+				8E7C3665222ECA0C00E70772 /* README.md */,
 				3A8CB754220B325200BDFE40 /* PDFReader */,
 				3A8CB753220B325200BDFE40 /* Products */,
 				3A8CB76F220B34BA00BDFE40 /* Frameworks */,
