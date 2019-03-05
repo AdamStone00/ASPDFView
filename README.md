@@ -1,8 +1,7 @@
 #  PDF Reader v1.0.0
+---
 
 Simple PDF reader using the PDFKit framework that allows the opening of PDFs in a self contained controller.
-
----
 
 ## Supported Features
 
@@ -21,13 +20,13 @@ Drag the entire <ASPDF> folder into your project. Make sure you also include PDF
 
 Create an instance of the viewer
 
-```objective-c
+```objc
 ASPDFView *pdfViewer = [[ASPDFView alloc] init];
 ```
 
 Load a PDF document from a URL or resource store and assign it as the PDFDocument for the viewer along with a name and present the controller.
 
-```objective-c
+```objc
 NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"pdf"];
 [pdfViewer setPdfDocument:[[PDFDocument alloc] initWithURL:url]];
 [pdfViewer setDocumentName:@"Example PDF"];
@@ -40,9 +39,19 @@ PDF Reader has several options for configuration:
 ### Style
 
 - navigationBackgroundColor (UIColor)
+```objc
+[self setNavigationBackgroundColor:[UIColor blackColor]];
+```
+
 - navigationForegroundColor (UIColor)
-- pageControlBackgroundColor (UIColor)
+```objc
+[self setNavigationForegroundColor:[UIColor whiteColor]];
+```
+
 - titleFont (UIFont)
+```objc
+[self setTitleFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:15]];
+```
 
 ### Feature Options
 - enableSearch
