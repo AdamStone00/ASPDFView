@@ -128,6 +128,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     [cell.textLabel setText:bookmark.pageName];
+    [cell.textLabel setFont:self.titleFont];
     return cell;
 }
 

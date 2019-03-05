@@ -110,8 +110,9 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
     
     //Setup Document Container
     [self.documentContainer setBackgroundColor:[UIColor lightGrayColor]];
+    [self.documentContainer setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin ];
     [self.documentContainer setAutoScales:YES];
-    [self.documentContainer setMaxScaleFactor:2.0];
+    [self.documentContainer setMaxScaleFactor:4.0];
     [self.documentContainer setMinScaleFactor:self.documentContainer.scaleFactorForSizeToFit];
     [self.documentContainer setDisplayMode:self.displayMode];
     [self.documentContainer zoomIn:self];
