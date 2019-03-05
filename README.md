@@ -3,6 +3,8 @@
 
 Simple PDF reader using the PDFKit framework that allows the opening of PDFs in a self contained controller.
 
+
+
 ## Supported Features
 
 - Document Search
@@ -10,9 +12,13 @@ Simple PDF reader using the PDFKit framework that allows the opening of PDFs in 
 - Bookmarking
 - Annotation
 
+
+
 ## Installation
 
 Drag the entire <ASPDF> folder into your project. Make sure you also include PDFKit.framework in your project.
+
+
 
 ## Usage
 
@@ -32,6 +38,8 @@ NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"pdf
 [pdfViewer setDocumentName:@"Example PDF"];
 [self presentViewController:pdfViewer animated:YES completion:nil];
 ```
+
+
 ## Configuration
 
 PDF Reader has several options for configuration:
@@ -61,6 +69,8 @@ PDF Reader has several options for configuration:
 - enableShare
 - enableBookmarking
 - enableAnnotations
+
+
 
 ## Project Details
 
