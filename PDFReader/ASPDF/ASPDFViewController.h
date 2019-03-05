@@ -31,6 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) PDFDisplayMode displayMode;
 @property (assign, nonatomic) PDFDisplayDirection displayDirection;
 
+@property (strong, nonatomic) PDFDocument *pdfDocument;
+@property (strong, nonatomic) NSString *documentName;
+
 
 //Interface
 @property (weak, nonatomic) IBOutlet PDFView *documentContainer;

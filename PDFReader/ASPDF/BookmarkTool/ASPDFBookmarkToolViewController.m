@@ -47,9 +47,6 @@
 
 - (void)configureToolBar {
     
-    //Tools Array
-    NSMutableArray *toolbarOptions = [[NSMutableArray alloc] init];
-    
     //Navigation Item
     [self.navigationItem setTitle:@"Bookmarks"];
     

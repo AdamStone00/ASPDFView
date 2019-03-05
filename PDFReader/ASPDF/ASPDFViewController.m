@@ -14,7 +14,6 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
 @interface ASPDFView ()
 
 //Internal
-@property (strong, nonatomic) PDFDocument *pdfDocument;
 @property (strong, nonatomic) UIBarButtonItem* shareButtonItem;
 @property (strong, nonatomic) UIBarButtonItem* searchButtonItem;
 @property (strong, nonatomic) UIBarButtonItem* bookmarkButtonItem;
@@ -151,8 +150,6 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
 
 - (void)loadPDFDocument {
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"sample" withExtension:@"pdf"];
-    [self setPdfDocument:[[PDFDocument alloc] initWithURL:url]];
     [self.pdfDocument setDelegate:(id)self];
     [self.documentContainer setDocument:self.pdfDocument];
     [self.documentContainer usePageViewController:(self.displayMode == kPDFDisplaySinglePage) ? YES :NO withViewOptions:nil];
@@ -288,7 +285,7 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
     NSMutableArray *toolbarOptions = [[NSMutableArray alloc] init];
     
     //Navigation Item
-    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:@"PDF VIEWER"];
+    UINavigationItem *navItem = [[UINavigationItem alloc] initWithTitle:self.documentName ? self.documentName : @""];
     
     //SHARE
     if (self.enableShare){
