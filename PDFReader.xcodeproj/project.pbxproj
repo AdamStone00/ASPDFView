@@ -20,6 +20,7 @@
 		3A8CB778220C47E600BDFE40 /* ASPDFAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8CB777220C47E600BDFE40 /* ASPDFAssets.xcassets */; };
 		3A8CB77D220DB2C800BDFE40 /* ASPDFPageControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8CB77C220DB2C800BDFE40 /* ASPDFPageControlCell.xib */; };
 		3A8CB780220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CB77F220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m */; };
+		8E67885222438CF7008DCA10 /* AppIcon2014.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E67885122438CF6008DCA10 /* AppIcon2014.png */; };
 		8E7C3633222D5CD400E70772 /* ASPDFBookmarkToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7C3632222D5CD400E70772 /* ASPDFBookmarkToolView.xib */; };
 		8E7C3636222D5D4400E70772 /* ASPDFBookmarkToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C3635222D5D4400E70772 /* ASPDFBookmarkToolViewController.m */; };
 		8E7C3639222D666B00E70772 /* ASPDFBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7C3638222D666B00E70772 /* ASPDFBookmark.m */; };
@@ -46,6 +47,7 @@
 		3A8CB77C220DB2C800BDFE40 /* ASPDFPageControlCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ASPDFPageControlCell.xib; sourceTree = "<group>"; };
 		3A8CB77E220DB7AC00BDFE40 /* ASPDFPageControlViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPDFPageControlViewCell.h; sourceTree = "<group>"; };
 		3A8CB77F220DB7AC00BDFE40 /* ASPDFPageControlViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFPageControlViewCell.m; sourceTree = "<group>"; };
+		8E67885122438CF6008DCA10 /* AppIcon2014.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon2014.png; sourceTree = "<group>"; };
 		8E7C3632222D5CD400E70772 /* ASPDFBookmarkToolView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ASPDFBookmarkToolView.xib; sourceTree = "<group>"; };
 		8E7C3634222D5D4400E70772 /* ASPDFBookmarkToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASPDFBookmarkToolViewController.h; sourceTree = "<group>"; };
 		8E7C3635222D5D4400E70772 /* ASPDFBookmarkToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ASPDFBookmarkToolViewController.m; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		3A8CB754220B325200BDFE40 /* PDFReader */ = {
 			isa = PBXGroup;
 			children = (
+				8E67885122438CF6008DCA10 /* AppIcon2014.png */,
 				3A8CB774220B3EB100BDFE40 /* TestData */,
 				3A8CB76B220B349800BDFE40 /* ASPDF */,
 				3A8CB755220B325200BDFE40 /* AppDelegate.h */,
@@ -215,6 +218,7 @@
 				8E89E0F02215CA250064CD54 /* TestView.xib in Resources */,
 				3A8CB762220B325300BDFE40 /* LaunchScreen.storyboard in Resources */,
 				3A8CB75F220B325300BDFE40 /* Assets.xcassets in Resources */,
+				8E67885222438CF7008DCA10 /* AppIcon2014.png in Resources */,
 				8E7C3633222D5CD400E70772 /* ASPDFBookmarkToolView.xib in Resources */,
 				3A8CB77D220DB2C800BDFE40 /* ASPDFPageControlCell.xib in Resources */,
 				3A8CB75D220B325200BDFE40 /* Main.storyboard in Resources */,
@@ -380,14 +384,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JRWK9M7R5V;
+				DEVELOPMENT_TEAM = 3N2585Z2DM;
 				INFOPLIST_FILE = PDFReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SNCLavalin.PDFReader;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SNCL-Enterprise.PDFReader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -398,14 +402,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JRWK9M7R5V;
+				DEVELOPMENT_TEAM = 3N2585Z2DM;
 				INFOPLIST_FILE = PDFReader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SNCLavalin.PDFReader;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.SNCL-Enterprise.PDFReader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

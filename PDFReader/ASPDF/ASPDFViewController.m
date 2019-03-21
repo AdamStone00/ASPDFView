@@ -54,7 +54,7 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
         [self setEnableShare: YES];
         [self setEnableBookmarking: YES];
         [self setEnableViewChange: YES];
-        [self setEnableAnnotations: YES];
+        [self setEnableAnnotations: NO];
         
         // SET DEFAULT VALUES - SOTRAGE
         [self setSearchResultArray:[[NSMutableArray alloc] init]];
@@ -248,17 +248,6 @@ static NSString *pageThumbnailCellIdentifier = @"PageThumbnailCell";
         
         if (self.vwBottomBar.alpha == 0){self.vwBottomBar.hidden = NO;}
         self.vwBottomBar.alpha = self.vwBottomBar.alpha == 1 ? 0 : 1;
-        
-        /*
-        if (self.vwTopBar.alpha == 0){
-            [self.lcDocumentContainerTop setConstant:0];
-            [self.lcDocumentContainerBottom setConstant:0];
-        }else{
-            [self.lcDocumentContainerTop setConstant:self.vwTopBar.bounds.size.height];
-            [self.lcDocumentContainerBottom setConstant:self.vwBottomBar.bounds.size.height];
-        }
-        
-        [self.documentContainer zoomIn:self];*/
         
         if (self.lcSearchOrigin.constant == 0){
             if (self.vwSearchBar.alpha == 0){self.vwSearchBar.hidden = NO;}
